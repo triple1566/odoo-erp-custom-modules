@@ -9,13 +9,15 @@
     'category': 'Accounting/Accounting',
     'website': 'https://www.odoo.com',
     'depends': [],
-    'data': [
-    ],
     'demo': [
     ],
     'installable': True,
+    'sequence': '1',
+    'data': [
+        "views/students.xml",
+        "views/college_menu.xml",
+             ],
     'application': True,
-    'post_init_hook': '_account_post_init',
     'assets': {
     },
     'author': 'Odoo S.A.',
