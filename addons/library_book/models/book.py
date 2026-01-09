@@ -16,6 +16,20 @@ class LibraryBook(models.Model):
         store=True
     )
 
+    #Define a field called state.
+    state = fields.Selection(
+        #The state can only have two values: draft, and published
+        [
+            #left is what we refer to in code, right is what UI shows
+            ('draft', 'Draft'),
+            ('published', 'Published'),
+        ],
+        # The state defaults to draft.
+        default='draft',
+        #Every book should have a state
+        required=True
+    )
+
     @api.depends('price')
     def _compute_is_expensive(self):
         for record in self:
@@ -28,3 +42,13 @@ class LibraryBook(models.Model):
                 raise ValidationError(
                     'published_year must be greater than 1500'
                 )
+
+    def action_publish(self):
+        for record in self:
+            if record.state=='published':
+                continue
+            if record.price <= 0:
+                raise ValidationError(
+                    "Can't publish a book with zero or negative price"
+                )
+            record.state='published'
