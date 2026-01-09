@@ -4,7 +4,8 @@
     'summary': 'simple library book management',
     'category':'tools',
     'depends':['base'],
-    'data':[
+    'data': [
+        'security/ir.model.access.csv',
         'views/book_views.xml',
     ],
     'application':True
