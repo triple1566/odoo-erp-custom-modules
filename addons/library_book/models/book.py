@@ -7,7 +7,8 @@ class LibraryBook(models.Model):
     _description='Library Book'
 
     name = fields.Char(required=True)
-    author = fields.Char(reqired=True)
+    author = fields.Char(required=True)
+    category_id = fields.Char(required=True)
     price = fields.Float()
     published_year = fields.Integer()
 
