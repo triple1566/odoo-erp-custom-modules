@@ -9,9 +9,12 @@
                 <field name="id" />
                 <field name="create_uid" />
                 <field name="name" />
+                <field name="alive" />
                 <field name="age" />
                 <field name="isvip" />
                 <field name="profit" />
+                <field name="loss" />
+                <field name="networth" />
                 <field name="region" />
             </list>
         </field>
@@ -22,6 +25,9 @@
         <field name="model">real_estate_clients</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button string="Neutralize" name="neutralize_client" type="object" class="btn-primary" invisible="isvip==True"/>
+                </header>
                 <group name="id" string="ID">
                     <field name="id" />
                     <field name="create_uid"/>
@@ -31,6 +37,8 @@
                     <field name="age" />
                     <field name="isvip" />
                     <field name="profit" />
+                    <field name="loss" />
+                    <field name="networth" />
                     <field name="region" />
                 </group>
             </form>
