@@ -7,6 +7,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/estate_property_views.xml',
+        'views/real_estate_clients_view.xml',
         'views/estate_property_menu.xml'
     ],
     'application':True

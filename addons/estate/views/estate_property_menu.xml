@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem id="test_menu_root" name="test">
+    <menuitem id="test_menu_root" name="Leo's Real Estate Module">
         <menuitem id="test_menu_action_1" name="properties">
             <menuitem
                 id="test_menu_sub_1"
-                name="dropdown menu "
+                name="dropdown menu"
                 sequence="1"
                 action="test_model_action"
+                />
+        </menuitem>
+        <menuitem id="test_menu_action_2" name="clients">
+            <menuitem
+                id="test_menu_sub_2"
+                name="Clients List"
+                sequence="1"
+                action="real_estate_clients_action"
                 />
         </menuitem>
     </menuitem>

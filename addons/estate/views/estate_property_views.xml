@@ -8,13 +8,15 @@
             <list>
                 <field name="id" />
                 <field name="create_uid" />
+                <field name="name" />
                 <field name="description" />
                 <field name="postcode" />
             </list>
         </field>
     </record>
     
-    <!-- 
+
+<!--Form view is suppressed when the list is defined to be editable-->
     <record id="test_model_form_view" model="ir.ui.view">
         <field name="name">Form View</field>
         <field name="model">test_model</field>
@@ -24,19 +26,17 @@
                 <sheet>
                     <group name="name" string="test_record">
                         <field name="name" />
-                        <field name="id" />
                         <field name="garage" />
                         <field name="facade" />
                         <field name="bedrooms" />
                     </group>
-                    <group name="name" string="string">
-                        
+                    <group name="name" string="ID">
+                        <field name="id" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-    -->
 
     <record id="test_model_action" model="ir.actions.act_window">
         <field name="name">Test action</field>
