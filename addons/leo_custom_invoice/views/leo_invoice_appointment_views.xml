@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="leo_invoice_appointment_view_list" model="ir.ui.view">
+        <field name="name">leo's appointment list view</field>
+        <field name="model">leo.appointment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="id" />
+                <field name="create_uid" />
+                <field name="therapist" />
+                <field name="date" />
+                <field name="basefee" />
+                <field name="discount" />
+                <field name="totalfee" />
+            </list>
+        </field>
+    </record>
+
+
+    <record id="leo_invoice_appointment_view_form" model="ir.ui.view">
+        <field name="name">Form</field>
+        <field name="model">leo.appointment</field>
+        <field name="arch" type="xml">
+            <form string="Edit Appointment Details">
+                <sheet>
+                    <group string="Appointment Info">
+                        <field name="therapist" />
+                        <field name="date" />
+                        <field name="basefee" />
+                        <field name="discount" />
+                        <field name="totalfee" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="leo_invoice_appointment_action" model="ir.actions.act_window">
+        <field name="name">Appointment Action</field>
+        <field name="res_model">leo.appointment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>
