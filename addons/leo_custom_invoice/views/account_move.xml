@@ -9,6 +9,12 @@
             <xpath expr="//list" position="inside">
                 <field name="appointment_id" />
             </xpath>
+
+            <xpath expr="//list" position="inside">
+                <field name="appointment_price" />
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_date_due']" position="replace"/>
         </field>
     </record>
 

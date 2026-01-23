@@ -7,3 +7,9 @@ class AccountMove(models.Model):
         'leo.appointment',
         string='Appointment',
     )
+
+    appointment_price = fields.Float(
+        related="appointment_id.totalfee",
+        store=True,
+        string='Appointment Price'
+    )
